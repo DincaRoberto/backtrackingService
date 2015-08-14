@@ -1,0 +1,140 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Apr 6, 2015, 7:35:05 PM
+    Author     : Dinca
+*/
+
+.sudokuContainer
+{
+    position:absolute;
+    width: 630px;
+    height: 630px;
+
+    font-size: 2em;
+    text-align: center;
+    vertical-align: center;
+}
+
+.line
+{
+    width:100%;
+    height: 70px;
+    background-color: grey;
+    margin:1px;
+}
+
+.col
+{
+    width:68px;
+    height: 69px;
+    background-color: darkgray;
+    float:left;
+
+    margin:1px;
+}
+
+.posibilities
+{
+    font-size: 0.3em;
+    float:left;
+}
+
+
+
+.myCellContainer
+{
+    background-color:red;
+    position:absolute;
+    width:300px;
+    height:300px;
+    top:25%;
+    left:25%;
+}
+.myCell
+{
+    background-color:grey;
+    position:relative;
+    width:98%;
+    height:98%;
+    margin:1px;
+    float:left;
+}
+
+.posibilitiesContainer
+{
+    background-color:blue;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0%;
+    left:0%;
+    font-size:0.4em;
+}
+
+.posibility
+{
+    background-color:grey;
+    position:relative;
+    width:28%;
+    height:28%;
+    margin:1px;
+    float:left;
+    transition:all 1s;
+}
+
+.posibility-disabled
+{
+    opacity:0;
+    translate:scale(0,0);
+}
+
+.posibility-one
+{
+    width:98%;
+    height:98%;
+    font-size:3em;
+    
+}
+
+.comboContainer
+{
+    background-color:yellow;
+    position:absolute;
+    width:25%;
+    height:25%;
+    top:25%;
+    left:25%;
+}
+
+.cellSolution
+{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-color:rgba(255,255,0,0.9);
+}
+
+#slider1
+{
+    position:absolute;
+    top:10%;
+    left:70%;
+}
+
+#steps
+{
+    position:absolute;
+    top:15%;
+    left:70%;
+}
+
+button
+{
+    top:5%;
+    left:70%;
+    position: absolute;
+}

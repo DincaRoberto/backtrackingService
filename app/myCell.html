@@ -1,0 +1,21 @@
+
+
+
+
+
+
+<div class="myCell" ng-init="sampleArray=[1,2,3,4,5,6,7,8,9]">
+    <div class="posibilitiesContainer">
+        <div class="posibility" ng-repeat="p in posibilities track by $index" ng-class="(posibilities.length==1)?'posibility-one':''">
+        {{p}}
+        </div>
+    </div>
+
+    <div class=comboContainer ng-show="(posibilities.length>1)&&(!gen.backtrackingStarted)"  >
+        <select ng-model="selectedP" ng-options="p for p in posibilities" ng-change="SelectedValueChanged()"></select>
+    </div>
+    
+    <div ng-show="(gen.backtrackingStarted)&&(posibilities.length>1)" class="cellSolution">
+        {{gen.solution[line*9 + col]}}
+    </div>
+</div>

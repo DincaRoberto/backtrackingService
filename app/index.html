@@ -1,0 +1,36 @@
+<html ng-app="SudokuSolver">
+    <head>
+        
+        <title>
+            Sudoku Solver
+        </title>
+		<link rel="stylesheet" href="styles/sudokuStyle.css">
+    </head>
+    <body class="generalFont" ng-controller="MainCtrl" ng-init="">
+
+        <div class="sudokuContainer">
+            <div ng-repeat="line in sudokuMatrix  track by $index" ng-init="l=$index" class="line">
+                <div ng-repeat="col in line track by $index" class="col" ng-init="c=$index">
+                    <!--span ng-if="col!=-1">{{col}} </span>
+                    <div ng-if="col==-1"> </div>
+                    <div ng-repeat="p in sudokuDomain[l][c] track by $index" class="posibilities">
+                    {{p}}    
+                    </div-->
+                    
+                    <sudokucell gen="gen" line="l" col="c" posibilities="sudokuDomain[l][c]" eliminate="eliminateOne(selection,l,c)"></sudokucell>
+                </div>
+                </br>
+            </div>
+        </div>
+        
+        <input id="slider1" type="range" min="1" max="100" step="1" ng-model="algSpeen">Backtracking delay</input>
+        <div id="steps">Steps so far: {{backtrackingService.steps}}</div>
+        
+        <button ng-click="onEliminateClicked()">StartBacktracking</button>
+		
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="scripts/services/backtrackingService.js"></script>
+		<script src="scripts/directives/sudokuCellDirective.js"></script>
+		<script src="scripts/appInstance.js"></script>
+    </body>
+</html>
